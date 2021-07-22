@@ -20,7 +20,7 @@ input[type=text], select {
   font-weight: bolder;
 }
 
-input[type=submit] {
+button {
   width: 80%;
   background-color: goldenrod;
   color:black;
@@ -54,8 +54,8 @@ h1{
     font-size: 40px;
     font-weight: bolder;
 }
-h3{
-  color: white;
+h2{
+  color: blue;
 }
 
 body {
@@ -75,7 +75,7 @@ body {
 
 <div>
  <!-- Html form which will get all the values from user -->
- <form action="{{ url_for('predict')}}" method="post" style="background-color:#E6E6FA">
+ <form action="/predict" method="post" style="background-color:#E6E6FA">
 
 <label for="Year">Year of Purchase</label><br>
 <input type="text" id="Year" name="Year" placeholder="Enter year like 2014" required="required"><br>
@@ -109,12 +109,12 @@ body {
      </select> <br>
      
 <!-- submit button -->           
-<input type="submit" value="Calculate Selling Price">
+    <button type="submit" value="Calculate Selling Price">Predict</button>
 </form>
 </div>
     
 <!-- the predicted text -->
-<h3>{{ prediction_text }}</h3>
+<h2>{{ prediction_text }}</h2>
 
 </body>
 </html>
